@@ -5,21 +5,21 @@ package com.bridgelabz.addressbook;
 public class ContactsDetails {
 
 	// variable declaration
-	private String firstname,lastname,address,city,state,email;
+	private String firstname, lastname, address, city, state, email;
 	private int zip;
 	private int phonenumber;
-	
-	 public ContactsDetails(String firstname, String lastname, String address, String city, String state, String email, int zip, int phonenumber)  {  
-		this.firstname = firstname;
-		 this.lastname =lastname;
-		 this.address = address;
-		 this.city = city;
-		 this.state = state;
-		 this.email = email;
-	     this.zip = zip;
-	     this.phonenumber = phonenumber;
-	 }
- // 
+
+	// public ContactsDetails(String firstname, String lastname, String address,
+	// String city, String state, String email, int zip, int phonenumber) {
+	// this.firstname = firstname;
+	// this.lastname =lastname;
+	// this.address = address;
+	// this.city = city;
+	// this.state = state;
+	// this.email = email;
+	// this.zip = zip;
+	// this.phonenumber = phonenumber;
+	// }
 
 	// getter or setter methods to assign or retrieve the contact details.
 	public String getFirstname() {
@@ -89,8 +89,8 @@ public class ContactsDetails {
 	@Override
 	public String toString() {
 		return "Contact details:" + "\n" + "FirstName=" + firstname + "\n" + "LastName=" + lastname + "\n" + "City="
-				+ city + "\n" + "State=" + state + "\n" + "Zip=" + zip + "\n" + "Address=" + address+ "\n" + "PhoneNumber=" + phonenumber+
-				"\n" +"Email=" + email;
+				+ city + "\n" + "State=" + state + "\n" + "Zip=" + zip + "\n" + "Address=" + address + "\n"
+				+ "PhoneNumber=" + phonenumber + "\n" + "Email=" + email;
 
 	}
 
