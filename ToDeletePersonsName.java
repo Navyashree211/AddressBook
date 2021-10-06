@@ -3,18 +3,17 @@ package com.bridgelabz.addressbook;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class EditExistingContactPerson {
-
+public class ToDeletePersonsName {
 	ArrayList<ContactsDetails> contactDetails = new ArrayList<>();
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		int i = 0;
-		EditExistingContactPerson obj = new EditExistingContactPerson();
+		ToDeletePersonsName obj = new ToDeletePersonsName();
 
 		while (i == 0) {
-			System.out.println("Do you want add new Contact/Edit existing contact: ");
-			System.out.println("1.Add details.\n2.Edit details.");
+			System.out.println("Do you would like to continue?: ");
+			System.out.println("1.Add details.\n2.Edit details.\n3.Delete the details");
 			int choose = sc.nextInt();
 			switch (choose) {
 			case 1:
@@ -22,6 +21,9 @@ public class EditExistingContactPerson {
 				break;
 			case 2:
 				obj.editContactDetails();
+				break;
+			case 3:
+				obj.deleteContactDetails();
 				break;
 			default:
 				i = 1;
@@ -37,7 +39,7 @@ public class EditExistingContactPerson {
 
 	public void addContactDetails() {
 
-		ContactsDetails contactsdetails = new ContactsDetails();// Object of ContactsDetails
+		ContactsDetails contactsdetails = new ContactsDetails();// Object of Contacts
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the First Name of person:");
 		contactsdetails.setFirstname(sc.next());
@@ -116,6 +118,22 @@ public class EditExistingContactPerson {
 				System.out.println("Enter valid First name");
 		}
 
+	}
+
+	// Purpose : Used deleteDetails method to delete the details of the person
+
+	public void deleteContactDetails() {
+
+		System.out.println("Confirm your first name to edit details: ");
+		String name = sc.next();
+
+		for (int i = 0; i < contactDetails.size(); i++) {
+			if (contactDetails.get(i).getFirstname().equals(name)) {
+				System.out.println("Select form below to change: ");
+				contactDetails.remove(i);
+			}
+		}
+		System.out.println(contactDetails);
 	}
 
 }
