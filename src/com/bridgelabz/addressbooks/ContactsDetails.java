@@ -1,4 +1,4 @@
-package com.bridgelabz.addressbook;
+package com.bridgelabz.addressbooks;
 
 public class ContactsDetails {
 
